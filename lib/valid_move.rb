@@ -1,4 +1,5 @@
 def valid_move?(board, index)
+  spot = position_taken?.to_i
   if position_taken?(board, index) == true && board[index].between?(0, 8)
     return false
   end
