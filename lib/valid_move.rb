@@ -1,9 +1,9 @@
 def valid_move?(board, index)
-  spot = position_taken?.to_i
-  if position_taken?(board, index) == true && board[index].between?(0, 8)
+  spot = index.to_i - 1
+  if position_taken?(board, spot) == true && spot.between?(0, 8)
     return false
   end
-  if position_taken?(board, index) == false &&  board[index].between?(0, 8)
+  if position_taken?(board, spot) == false &&  spot.between?(0, 8)
     return true
   end
 end
